@@ -1,0 +1,46 @@
+{
+  "name": "devduel-backend",
+  "version": "1.0.0",
+  "description": "Real-time 1v1 competitive programming duel platform backend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node src/scripts/migrate.js",
+    "test": "node test-auth.js && node test-codeforces.js && node test-rooms.js && node test-socket-lobby.js && node test-socket-duel.js && node test-duel-persistence.js && node test-poller.js",
+    "test:auth": "node test-auth.js",
+    "test:cf": "node test-codeforces.js",
+    "test:rooms": "node test-rooms.js",
+    "test:lobby": "node test-socket-lobby.js",
+    "test:duel": "node test-socket-duel.js",
+    "test:persistence": "node test-duel-persistence.js",
+    "test:poller": "node test-poller.js"
+  },
+  "keywords": [
+    "devduel",
+    "competitive-programming",
+    "codeforces",
+    "socketio",
+    "express",
+    "postgresql"
+  ],
+  "author": "DevDuel Team",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^10.0.9",
+    "pg": "^8.13.3",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
